@@ -7,11 +7,10 @@ module.exports.run = async (blaki, message, args) => {
     let pass = (args[0]);
     let mode = args.slice(1).join(' ')
     let everyone = message.guild.defaultRole;
-    const zasady0 = "**» NIE** WALCZ DOPÓKI NIE ZAMKNIE SIĘ 2 STREFA!"
-    const zasady1 = "**» NIE** WALCZ PRZED 3 STREFĄ JEŚLI WŁĄCZY SIĘ STORM SURGE!"
-    const zasady2 = "**» NIE** LATAJ NA SUNNY STEPS KIEDY GRA BLAKI!"
-    const zasady3 = "**» NIE** UŻYWAJ TRYBU ANONIMOWEGO PODCZAS GRY!"
-    const zasady4 = "**» NIE** BIJEMY SIĘ NA PIERWSZYCH MIEJSCÓWKACH !"
+    const zasady0 = "**» ZAKAZ** KORZYSTANIA Z ROBOTÓW!"
+    const zasady1 = "**» ZAKAZ** LEAKOWANIA HASŁA!"
+    const zasady2 = "**» ZAKAZ** W-KEYOWANIA BEZCELOWEGO"
+    const zasady3 = "**» ZAKAZ** STREAMSNAJPIENIA!"
     const check = '608996447169544203'
  
     if(!message.member.roles.has(HOST.id)) return message.reply("Ooops, nie posiadasz uprawnień!");
@@ -26,7 +25,7 @@ module.exports.run = async (blaki, message, args) => {
     .addField("**HASŁO:**", `**${pass}**`, true)
     .addField("**HOST:**", `${message.author}`, true)
     .addField("**TRYB:**", `**${mode}**`)
-    .addField("**ZASADY:**", zasady0 + `\n` +zasady1 + `\n`+ zasady2 + `\n`+ zasady3 + `\n`+ zasady4)
+    .addField("**ZASADY:**", zasady0 + `\n` +zasady1 + `\n`+ zasady2 + `\n`+ zasady3)
     .setTimestamp(message.createdAt)
     .setFooter("Kliknij reakcje jeśli grasz", "https://i.imgur.com/10WUhHy.png");
     message.channel.send(everyone.toString());
