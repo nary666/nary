@@ -5,7 +5,6 @@ module.exports.run = async (blaki, message, args) => {
     let HOST = message.guild.roles.find("name", "Hejka");
  
     let pass = (args[0]);
-    let mode = args.slice(1).join(' ')
     let everyone = message.guild.defaultRole;
     const zasady0 = "**» ZAKAZ** KORZYSTANIA Z ROBOTÓW!"
     const zasady1 = "**» ZAKAZ** LEAKOWANIA HASŁA!"
@@ -21,10 +20,9 @@ module.exports.run = async (blaki, message, args) => {
     message.delete();
     let customEmbed = new Discord.RichEmbed()
     .setColor("#ff005c")
-    .setTitle("__**NOWA GRA!**__")
+    .setTitle("__**ARENA SOLO CUSTOM!**__")
     .addField("**HASŁO:**", `**${pass}**`, true)
     .addField("**HOST:**", `${message.author}`, true)
-    .addField("**TRYB:**", `**${mode}**`)
     .addField("**ZASADY:**", zasady0 + `\n` +zasady1 + `\n`+ zasady2 + `\n`+ zasady3)
     .setTimestamp(message.createdAt)
     .setFooter("Kliknij reakcje jeśli grasz", "https://i.imgur.com/10WUhHy.png");
