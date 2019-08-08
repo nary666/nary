@@ -12,7 +12,6 @@ module.exports.run = async (blaki, message, args) => {
     const zasady2 = "***» MNIEJ NIŻ 55 OSÓB WALCZYMY OD ZAMKNIĘCIA SIĘ 4 STREFY !***"
     const zasady3 = "***» NIE LATAJ NA PODIUM I NIE BIEGAJ ZA BEZNICKOSEM BO ZGINIESZ !***"
     const zasady4 = "***» NIE BIJEMY SIĘ NA PIERWSZYCH MIEJSCÓWKACH !***"
-    const check = '579026088487813160'
 
     if(!message.member.roles.has(Szefuncio.id)) return message.reply("oops");
     if(!args[0]) return message.channel.send("❌ _Wprowadź prawidłowe wartości, **b!late hasło tryb**_ ❌").then(() =>
@@ -30,7 +29,6 @@ module.exports.run = async (blaki, message, args) => {
     .setFooter("Kliknij reakcje jeśli grasz", "https://i.imgur.com/g10ycEV.png");
     message.channel.send(everyone.toString());
     message.channel.send(customEmbed).then(function (message) {
-        message.react(check)
     })
 }
 
